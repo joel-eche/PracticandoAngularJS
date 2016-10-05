@@ -1,0 +1,25 @@
+<!doctype>
+<html ng-app="MiFirstApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Dependency Injection</title>
+    </head>
+    <body ng-controller="FirstController">
+        
+        Usuario :<input type="text" ng-model="nuevoComentario.username" />
+        Comentario: <input type="text" ng-model="nuevoComentario.comentario" />
+        <br>
+        <br>
+        <button ng-click="agregarComentario()">Agregar comentario</button>
+        
+        <h2>Comments</h2>
+        <ul>
+            <li ng-repeat="c in comentarios">
+                {{c.comentario}} - <strong>{{c.username}}</strong>
+            </li>
+        </ul>
+        
+        <script src="../angular.min.js"></script>
+        <script src="controller.js"></script>
+    </body>
+</html>

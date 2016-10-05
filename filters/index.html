@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="mainModule">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Filtros</title>
+    </head>
+    <body ng-controller="FilterController">
+        {{mi_html | removeHtml}}
+        <br>
+        {{mi_json | json}}
+        <br>
+        {{costo | currency:"S/."}}
+    </body>
+    <script src="../angular.min.js"></script>
+    <script src="controller.js"></script>
+</html>

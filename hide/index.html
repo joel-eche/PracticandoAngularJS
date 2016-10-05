@@ -1,0 +1,36 @@
+<!doctype hmtl>
+<html ng-app="miApp">
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            .animated{
+                opacity: 1;
+                max-height: auto;
+                overflow: hidden;
+                transition: all 2s;
+            }
+            
+            .animated.ng-hide{
+                opacity: 0;
+                max-height: 0px !important;
+                display: block: !important;
+            }
+        </style>
+        <title>Filtros</title>
+    </head>
+    <body ng-controller="miController">
+        <div ng-show="loading">Cargando, espera wey :) ...</div>
+        <div ng-show="!loading && posts.length>0"></div>
+        
+        <ul ng-show="posts.length>0" class="animated">
+            <li ng-repeat="post in posts">
+                <h2>{{post.title}}</h2>
+                <p>
+                    {{post.body}}
+                </p>
+            </li>
+        </ul>
+    </body>
+    <script src="../angular.min.js"></script>
+    <script src="controller.js"></script>
+</html>

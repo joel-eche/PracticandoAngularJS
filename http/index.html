@@ -1,0 +1,21 @@
+<!doctype>
+<html ng-app="MyFirstApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTTP</title>
+    </head>
+    <body ng-controller="FirstController">
+        <input type="text" ng-model="newpost.title">
+        <textarea ng-model="newpost.body"></textarea>
+        <button ng-click="addPost()">Enviar</button>
+        <ul>
+            <li ng-repeat="post in posts">
+                <h3>{{post.title}}</h3>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>
+        
+        <script src="../angular.min.js"></script>
+        <script src="controller.js"></script>
+    </body>
+</html>
