@@ -1,0 +1,43 @@
+<!doctype hmtl>
+<html ng-app="CustomDirective">
+<head>
+    <style type="text/css" media="screen">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+      }
+
+      .circular{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        background-color: green;
+      }
+      .no-list li{
+        list-style-type: none;
+      }
+      body,html{
+        text-align: center;
+        background-color: #eee;
+        margin: 0px;
+      }
+
+  </style>
+  
+  <link rel="stylesheet" type="text/css" href="autocomplete-jquery-ui.structure.css">
+  <meta charset="utf-8"/>
+  <title>Directivas</title>
+</head>
+<body ng-cloak><!--ngController no es necesario ues el routing le está diciendo que el controlador será ReposController-->
+    <div ng-view>
+      
+    </div>
+</body>
+<script src="http://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="../angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+<script src="app.js"></script>
+<script src="directives.js"></script>
+<script src="controller.js"></script>
+<script src="autocomplete-jquery-ui.js"></script>
+</html>

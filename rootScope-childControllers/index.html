@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="MyApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>rootScope y Child Controller</title>
+    </head>
+    <body ng-controller="MyController">
+        {{nombre}}
+        <p><strong>Padre: </strong>{{$parent.nombre}}</p>
+        <div ng-controller="ChildController">
+            <p><strong>Hijo: </strong>{{nombre}}</p>
+            <input type="text" ng-model="$parent.nombre">
+        </div>
+    </body>
+    <script src="../angular.min.js"></script>
+    <script src="controller.js"></script>
+</html>

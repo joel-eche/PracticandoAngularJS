@@ -1,0 +1,24 @@
+<!doctype hmtl>
+<html ng-app="miApp">
+<head>
+    <style type="text/css" media="screen">
+        .no-hover{
+            opacity: 0;
+        }
+        .hover{
+            opacity: 1;
+            background-color: green;
+        }
+    </style>
+    <meta charset="utf-8"/>
+    <title>ng-events</title>
+</head>
+<body ng-controller="miController">
+<button ng-mouseover="bandera=true;cont=1;" ng-mouseout="bandera=false" ng-click="cont=cont+1">Hover me</button><span ng-show="bandera">Clickea</span>
+    <hr>
+    <p>{{bandera | json}}</p>
+    <a ng-class="{'hover':bandera,'no-hover':!bandera}">Contador: {{cont}}</a>
+</body>
+<script src="../angular.min.js"></script>
+<script src="controller.js"></script>
+</html>

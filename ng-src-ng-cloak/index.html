@@ -1,0 +1,25 @@
+<!doctype hmtl>
+<html ng-app="CustomDirective">
+<head>
+    <style type="text/css" media="screen">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+          display: none !important;
+      }
+      img{
+        width: 30px;
+      }
+  </style>
+  <meta charset="utf-8"/>
+  <title>ng-src | ng-cloak</title>
+</head>
+<body ng-controller="AppCtrl" ng-cloak>
+    <ul class="no-list" >
+        <li ng-repeat="repo in repos">
+            <img ng-src="{{repo.owner.avatar_url}}" alt="">
+            <h1>{{repo.name}}</h1>
+        </li>
+    </ul>
+</body>
+<script src="../angular.min.js"></script>
+<script src="controller.js"></script>
+</html>
